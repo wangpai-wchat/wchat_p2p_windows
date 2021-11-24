@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="250.0" prefHeight="100.0"
+            id="newFriends" stylesheets="@NewFriends.css"
+            fx:controller="org.wangpai.wchat.ui.view.functions.contacts.newfriends.NewFriends"
+            fx:id="newFriends">
+    <!-- 小标题 -->
+    <Label layoutX="10.0" layoutY="15.0" prefWidth="240.0" prefHeight="25.0"
+           id="newFriendsTag"
+           fx:id="newFriendsTag"
+           text="新的朋友"/>
+
+    <ListView layoutX="0.0" layoutY="40.0" prefWidth="250.0" prefHeight="60.0"
+              styleClass="newFriendsList"
+              fx:id="newFriendsList">
+        <AnchorPane prefWidth="250.0" prefHeight="60.0"
+                    id="newFriendsElement"
+                    onMouseClicked="#onClickNewFriends"
+                    fx:id="newFriendsElement">
+            <!-- 头像 -->
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="40.0" prefHeight="40.0"
+                   id="newFriendsAvatar"
+                   fx:id="avatar"/>
+
+            <!-- 名称 -->
+            <Label layoutX="60.0" layoutY="20.0" prefWidth="190.0" prefHeight="20.0"
+                   text="新的朋友"
+                   id="newFriendsName"
+                   fx:id="name"/>
+        </AnchorPane>
+    </ListView>
+</AnchorPane>

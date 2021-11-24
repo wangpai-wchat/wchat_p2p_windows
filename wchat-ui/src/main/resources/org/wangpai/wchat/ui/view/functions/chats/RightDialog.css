@@ -1,0 +1,28 @@
+
+.rightDialog {
+    -fx-background-color: transparent;
+}
+
+.msgTime {
+    -fx-background-color: #dadada;
+    -fx-background-radius: 2px;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+
+.dialogAvatar {
+    -fx-background-color: #ffffff;
+}
+
+.rightDialogMsg {
+    -fx-background-radius: 2px;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+}
+
+.rightDialogMsg, .rightDialogMsg .content, .rightDialogMsg:focused {
+    -fx-background-color: #9eea6a;
+}

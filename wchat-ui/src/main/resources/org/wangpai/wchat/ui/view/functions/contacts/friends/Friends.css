@@ -1,0 +1,69 @@
+
+#friends {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0;
+}
+
+#friendsTag {
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #999999;
+    -fx-alignment: center-left;
+}
+
+#friendsList {
+    -fx-background-color: transparent;
+}
+
+#friendsList .scroll-bar:vertical .track,
+#friendsList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#friendsList .scroll-bar:vertical .increment-button,
+#friendsList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+#friendsList .scroll-bar:horizontal .increment-button,
+#friendsList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+#friendsList .scroll-bar .increment-button,
+#friendsList .scroll-bar .decrement-button {
+    -fx-padding: 0 0 -10000 0;
+}
+
+#friendsList .scroll-bar:vertical .thumb,
+#friendsList .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+#friendsList .scroll-bar:vertical,
+#friendsList .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+
+#friendsList .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#friendsList .list-cell:selected {
+    -fx-background-color: #c6c5c4;
+    -fx-text-fill: black;
+}
+
+#friendsList .cell.indexed-cell.list-cell {
+    -fx-padding: 0;
+}

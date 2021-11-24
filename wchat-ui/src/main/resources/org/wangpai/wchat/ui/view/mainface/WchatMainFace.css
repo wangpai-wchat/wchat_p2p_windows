@@ -1,0 +1,446 @@
+
+#wchatMainFace {
+    /*
+     此边框宽度如果不设为 0 且自定义了边框颜色，那么不管设为什么颜色，都会有白边。
+     使用 -fx-border-insets 并设成负数，是为了设置边框的偏移，以抵消边框导致的容器尺寸变化
+     */
+    -fx-border-width: 1px;
+    -fx-border-color: #e5e5e5;
+    -fx-border-insets: -1px;
+    /* 可能是上面的 -fx-border-insets 的影响，此处的 -fx-border-radius 需进行额外调整 */
+    -fx-border-radius: 0px;
+
+    /* 此处如果设置成透明，很多组件会有被选中时的蓝色边框，且窗体边缘在不同组件的交点处会发生波动 */
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 4px;
+}
+
+#functionBar {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 4px 0px 0px 4px;
+    -fx-border-radius: 4px 0px 0px 4px;
+    -fx-border-width: 0px;
+}
+
+#functionBarAvatar {
+    -fx-background-radius: 2px;
+    -fx-background-color: transparent;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-border-width: 0px;
+    -fx-border-radius: 2px;
+    -fx-cursor: hand;
+}
+
+#functionBarChats, #functionBarContacts, #functionBarFavorites, #functionBarMore {
+    -fx-background-size: 25px 25px;
+    -fx-background-radius: 2px;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 2px;
+    -fx-border-color: transparent;
+}
+
+#functionBarChats {
+    -fx-background-image: url("/system/icons/mainface/chats-origin.png");
+}
+
+#functionBarContacts {
+    -fx-background-image: url("/system/icons/mainface/contacts-origin.png");
+}
+
+#functionBarMore {
+    -fx-background-image: url("/system/icons/mainface/more-origin.png");
+}
+
+/**
+ * 注意：伪类选择器 hover 会覆盖伪类选择器 pressed 的效果。
+ * 如果需要设置 pressed，请不要在这里设置，而应该将 hover、pressed 的效果使用回调函数来代替
+ */
+#functionBarMore:hover {
+    -fx-background-image: url("/system/icons/mainface/more-hover.png");
+}
+
+#chatsList {
+    /* 此处如果不设置成透明，会有选中列表元素时总列表边框突出的多余效果 */
+    -fx-background-color: transparent;
+}
+
+#chatsGroup, #chatsList .list-cell {
+    -fx-background-color: #eae8e7;
+}
+
+#chatsList .list-cell:selected {
+    -fx-background-color: #c6c5c4;
+}
+
+/* 滑条的轨道 */
+#chatsList .scroll-bar:vertical .track,
+#chatsList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#chatsList .scroll-bar:horizontal .increment-button,
+#chatsList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+#chatsList .scroll-bar:vertical .increment-button,
+#chatsList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-padding: 0 0 -10000 0;
+}
+
+#chatsList .scroll-bar .increment-button,
+#chatsList .scroll-bar .decrement-button {
+    -fx-padding: 0;
+}
+
+#chatsList .scroll-bar:vertical .thumb,
+#chatsList .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+#chatsList .scroll-bar:vertical,
+#chatsList .scroll-bar:horizontal {
+    -fx-pref-width: 10;
+    -fx-background-color: transparent;
+}
+
+#chatsList .scroll-bar:horizontal .increment-arrow,
+#chatsList .scroll-bar:horizontal .decrement-arrow,
+#chatsList .scroll-bar:horizontal .increment-button,
+#chatsList .scroll-bar:horizontal .decrement-button {
+    /* 去除横向的滚动条 */
+    -fx-padding: 0;
+}
+
+#chatsHeadBar {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #e7e7e7;
+    -fx-background-color: #f5f5f5;
+}
+
+#chatsTitle {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+#chatsDialogContent {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+
+#chatsToolBar {
+    -fx-border-width: 0px;
+    -fx-background-color: white;
+}
+
+#chatsSticker {
+    -fx-background-size: 4px 4px;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+#chatsInputBox {
+    -fx-background-color: white;
+    -fx-border-width: 0px;
+}
+
+#chatsSendBox {
+    -fx-background-color: white;
+    -fx-background-radius: 0 0 4px 0;
+    -fx-border-width: 0px;
+}
+
+#chatsSendButton {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #e5e5e5;
+    -fx-border-width: 1px;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #606060;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+#chatsSendButton:hover {
+    -fx-text-fill: #ffffff;
+    -fx-border-width: 0px;
+    -fx-background-color: #129611;
+}
+
+#chatsAlertMsg {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-alignment: center;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 12px;
+}
+
+#contactsList {
+    /* 此处如果不设置成透明，会有选中列表元素时总列表边框突出的多余效果 */
+    -fx-background-color: transparent;
+}
+
+/* 外部的 ListView 不能有选中效果。因此颜色设为相同 */
+#contactsGroup, #contactsList .list-cell, #contactsList .list-cell:selected {
+    -fx-background-color: #ebe9e8;
+}
+
+#contactsList .scroll-bar:vertical .track,
+#contactsList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#contactsList .scroll-bar:horizontal .increment-button,
+#contactsList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+#contactsList .scroll-bar:vertical .increment-button,
+#contactsList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 -10000 0;
+}
+
+#contactsList .scroll-bar .increment-button,
+#contactsList .scroll-bar .decrement-button {
+    -fx-padding: 0;
+}
+
+#contactsList .scroll-bar:vertical,
+#contactsList .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+
+#contactsList .scroll-bar:vertical .thumb,
+#contactsList .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-radius: 20px;
+}
+
+#contactsList .scroll-bar:horizontal .increment-arrow,
+#contactsList .scroll-bar:horizontal .decrement-arrow,
+#contactsList .scroll-bar:horizontal .increment-button,
+#contactsList .scroll-bar:horizontal .decrement-button {
+    /* 去除横向的滚动条 */
+    -fx-padding: 0;
+}
+
+#contactsHeadBar {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #e7e7e7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+#contactsTitle {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+#contactsContent {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+}
+
+.functionFace {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px 4px 4px 0px;
+    /* 此边框宽度如果不设为 0，不管设为什么颜色，都会有白边 */
+    -fx-border-width: 0px;
+    -fx-border-radius: 0px 4px 4px 0px;
+    -fx-padding: 0;
+}
+
+.search {
+    -fx-background-color: #f7f7f7;
+}
+
+.searchInput {
+    -fx-background-color: #e2e2e2;
+    -fx-background-radius: 4px;
+    -fx-background-image: url("/system/icons/mainface/search.png");
+    -fx-background-size: 12px 12px;
+    -fx-background-position: 6px center;
+    -fx-background-repeat: no-repeat;
+    -fx-font-size: 12px;
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-padding: 0 0 0 30;
+    -fx-border-width: 0;
+}
+
+.searchInput:focused {
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: #e7e7e7;
+    -fx-border-width: 2;
+    -fx-border-radius: 8px;
+}
+
+.add {
+    -fx-background-color: #dbd9d8;
+    -fx-background-size: 20px 20px;
+    -fx-background-image: url("/system/icons/mainface/add.png");
+    -fx-background-position: center;
+    -fx-background-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e7e7e7;
+    -fx-cursor: hand;
+}
+
+.add:hover {
+    -fx-background-color: #d1d1d1;
+}
+
+.mainFaceControl {
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 0px 4px 0px 0px;
+    -fx-border-radius: 0px 4px 0px 0px;
+}
+
+.minimize, .maximize {
+    -fx-background-size: 25px 25px;
+    -fx-background-color: transparent;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-border-width: 0;
+    -fx-border-radius: 0px 0px 0px 0px;
+    -fx-cursor: hand;
+}
+
+.minimize {
+    -fx-background-image: url("/system/icons/mainface/min-origin.png");
+}
+
+.minimize:hover {
+    -fx-background-color: #e5e5e5;
+    -fx-background-image: url("/system/icons/mainface/min-hover.png");
+}
+
+.maximize {
+    -fx-background-color: transparent;
+    -fx-background-image: url("/system/icons/mainface/maximize-origin.png");
+    -fx-background-size: 10px 10px;
+}
+
+.maximize:hover {
+    -fx-background-color: #e5e5e5;
+    -fx-background-image: url("/system/icons/mainface/maximize-hover.png");
+}
+
+.close {
+    -fx-background-size: 11px 11px;
+    -fx-background-image: url("/system/icons/mainface/close-origin.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 0px 4px 0px 0px;
+    -fx-background-radius: 0px 4px 0px 0px;
+    -fx-cursor: hand;
+}
+
+.close:hover {
+    -fx-background-color: #f45454;
+    -fx-background-image: url("/system/icons/mainface/close-hover.png");
+}
+
+.infoMore {
+    -fx-background-size: 40px 40px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/system/icons/mainface/info-origin.png");
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.infoMore:hover {
+    -fx-background-size: 40px 40px;
+    -fx-background-color: transparent;
+    -fx-background-image: url("/system/icons/mainface/info-hover.png");
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.input {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+    -fx-border-width: 0;
+}
+
+.input .content {
+    -fx-background-color: #ffffff;
+}
+
+.input:focused {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.input .scroll-bar:vertical .track,
+.input .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.input .scroll-bar:vertical .increment-button,
+.input .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.input .scroll-bar:horizontal .increment-button,
+.input .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0 0 0 0;
+}
+
+.input .scroll-bar .increment-button,
+.input .scroll-bar .decrement-button {
+    -fx-padding: 0 0 -10000 0;
+}
+
+.input .scroll-bar:vertical .thumb,
+.input .scroll-bar:horizontal .thumb {
+    -fx-background-color: #d2d2d2;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+.input .scroll-bar:vertical,
+.input .scroll-bar:horizontal {
+    -fx-pref-width: 10;
+    -fx-background-color: transparent;
+}
+
+.defaultFace {
+    -fx-background-color: #f5f5f5;
+}
+
+.defaultFaceLabel {
+    -fx-background-size: 100px 100px;
+    -fx-background-image: url("/system/icons/mainface/wchat.png");
+}

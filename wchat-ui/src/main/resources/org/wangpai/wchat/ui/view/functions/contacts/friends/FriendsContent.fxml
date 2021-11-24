@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="685.0" prefWidth="700.0"
+            stylesheets="@FriendsContent.css" styleClass="friendsContent"
+            fx:id="friendsContent"
+            fx:controller="org.wangpai.wchat.ui.view.functions.contacts.friends.FriendsContent">
+    <Button layoutX="300" layoutY="35" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0"
+            prefHeight="100" prefWidth="100"
+            id="friendsContentAvatar" fx:id="avatar" onAction="#onActionFriendsContentAvatar"/>
+
+    <Label layoutX="200.0" layoutY="185.0" prefHeight="25.0" prefWidth="40.0"
+           styleClass="friendsContentLabel" text="昵称"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="250.0" layoutY="182.0" prefWidth="200" prefHeight="25"
+               fx:id="nicknameTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="457.0" layoutY="190.0" prefWidth="15" prefHeight="15"
+            fx:id="nicknameCancelButton"
+            onAction="#onActionNicknameCancelButton" visible="false"
+            styleClass="friendsContentCancelButton"/>
+
+    <Label layoutX="200.0" layoutY="265.0" prefHeight="25.0" prefWidth="40.0"
+           styleClass="friendsContentLabel" text="备注"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="250.0" layoutY="262.0" prefWidth="200" prefHeight="25"
+               fx:id="remarksTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="457.0" layoutY="270.0" prefWidth="15" prefHeight="15"
+            mnemonicParsing="false" visible="false"
+            fx:id="remarksCancelButton"
+            styleClass="friendsContentCancelButton" onAction="#onActionRemarksCancelButton"/>
+
+    <Label layoutX="155.0" layoutY="345.0" prefHeight="25.0" prefWidth="20.0" styleClass="friendsContentLabel"
+           text="IP"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="185.0" layoutY="342.0" prefWidth="150" prefHeight="25"
+               fx:id="ipTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="342.0" layoutY="350.0" prefWidth="15" prefHeight="15"
+            mnemonicParsing="false" visible="false"
+            fx:id="ipCancelButton"
+            onAction="#onActionIpCancelButton"
+            styleClass="friendsContentCancelButton"/>
+    <Label layoutX="385.0" layoutY="345.0" prefHeight="25.0" prefWidth="50.0"
+           styleClass="friendsContentLabel" text="端口号"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="445.0" layoutY="342.0" prefWidth="150" prefHeight="25"
+               fx:id="portTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="602.0" layoutY="350.0" prefWidth="15" prefHeight="15"
+            mnemonicParsing="false" visible="false"
+            fx:id="portCancelButton"
+            onAction="#onActionPortCancelButton"
+            styleClass="friendsContentCancelButton"/>
+
+    <Label layoutX="95.0" layoutY="425.0" prefHeight="25.0" prefWidth="80.0"
+           styleClass="friendsContentLabel" text="对方的暗号"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="185.0" layoutY="422.0" prefWidth="150" prefHeight="25"
+               fx:id="myContactCodeTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="342.0" layoutY="430.0" prefWidth="15" prefHeight="15"
+            mnemonicParsing="false" visible="false"
+            fx:id="myContactCodeCancelButton"
+            onAction="#onActionMyContactCodeCancelButton"
+            styleClass="friendsContentCancelButton"/>
+    <Label layoutX="375.0" layoutY="425.0" prefHeight="25.0" prefWidth="60.0"
+           styleClass="friendsContentLabel" text="我的暗号"/>
+    <!-- 因为 TextField 自身的边框宽度与文本与边框的距离，高度坐标应减 3 -->
+    <!-- 可以对齐的 TextField 应该纵向对齐，所以它们的 layoutX 应该相同 -->
+    <TextField layoutX="445.0" layoutY="422.0" prefWidth="150" prefHeight="25"
+               fx:id="otherPartyContactCodeTextField"
+               styleClass="friendsContentTextField"/>
+    <!-- Button 的高度较小，高度坐标应加 5 -->
+    <Button layoutX="602.0" layoutY="430.0" prefWidth="15" prefHeight="15"
+            mnemonicParsing="false" visible="false"
+            fx:id="otherPartyContactCodeCancelButton"
+            onAction="#onActionOtherPartyContactCodeCancelButton" styleClass="friendsContentCancelButton"/>
+
+    <Button layoutX="282.5" layoutY="515.0" prefHeight="35.0" prefWidth="135.0" text="发消息"
+            fx:id="sendMsgButton"
+            styleClass="friendsContentSendMsg" onAction="#onActionSendButton"/>
+
+    <Button layoutX="195" layoutY="515.0" prefHeight="35.0" prefWidth="135.0" text="保存" visible="false"
+            fx:id="saveButton"
+            styleClass="friendsContentSave" onAction="#onActionSaveButton"/>
+    <Button layoutX="370" layoutY="515.0" prefHeight="35.0" prefWidth="135.0" text="丢弃" visible="false"
+            fx:id="discardButton"
+            styleClass="friendsContentDiscard" onAction="#onActionDiscardButton"/>
+</AnchorPane>

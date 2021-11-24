@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="670.0" prefHeight="80.0" styleClass="rightDialog"
+            stylesheets="@RightDialog.css"
+            onMouseClicked="#onClickRightDialog"
+
+            fx:controller="org.wangpai.wchat.ui.view.functions.chats.RightDialog"
+            fx:id="rightDialog">
+    <!-- 时间信息 -->
+    <!-- 此组件的 X 坐标应使之位于中间，宽度随时间文本动态调整，但高度应不变 -->
+    <Label layoutX="330.0" layoutY="10.0" prefWidth="40.0" prefHeight="18.0"
+           styleClass="msgTime"
+           fx:id="time"/>
+    <!-- 头像 -->
+    <Label layoutX="635.0" layoutY="40.0" prefWidth="35.0" prefHeight="35.0"
+           styleClass="dialogAvatar"
+           fx:id="avatar"/>
+
+    <!-- 文本信息 -->
+    <!-- 此组件的尺寸将在 Java 代码中动态调整，但其右上端点 X 坐标应保持不变 -->
+    <TextArea layoutX="255.0" layoutY="40.0" prefWidth="370.0" prefHeight="35.0"
+              wrapText="true" editable="false"
+              styleClass="rightDialogMsg"
+              fx:id="msg"/>
+</AnchorPane>

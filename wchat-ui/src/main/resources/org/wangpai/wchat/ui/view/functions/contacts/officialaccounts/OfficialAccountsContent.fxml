@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 公众号右侧界面暂时不加入 -->
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="685.0" prefWidth="700.0" styleClass="newFriends"
+            stylesheets="@OfficialAccountsContent.css">
+
+</AnchorPane>

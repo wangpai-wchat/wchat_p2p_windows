@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="250.0" prefHeight="100.0"
+            id="officialAccounts" stylesheets="@OfficialAccounts.css"
+            fx:controller="org.wangpai.wchat.ui.view.functions.contacts.officialaccounts.OfficialAccounts"
+            fx:id="officialAccounts">
+    <!-- 小标题 -->
+    <Label layoutX="10.0" layoutY="15.0" prefWidth="240.0" prefHeight="25.0"
+           id="officialAccountsTag"
+           fx:id="officialAccountsTag"
+           text="公众号"/>
+
+    <ListView layoutX="0.0" layoutY="40.0" prefWidth="250.0" prefHeight="60.0"
+              id="officialAccountsList"
+              fx:id="officialAccountsList">
+        <AnchorPane prefWidth="250.0" prefHeight="60.0"
+                    id="officialAccountsElement"
+                    onMouseClicked="#onClickOfficialAccounts"
+                    fx:id="officialAccountsElement">
+            <!-- 头像 -->
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="40.0" prefHeight="40.0"
+                   id="officialAccountsAvatar"
+                   fx:id="avatar"/>
+
+            <!-- 名称 -->
+            <Label layoutX="60.0" layoutY="20.0" prefWidth="190.0" prefHeight="20.0"
+                   text="公众号"
+                   id="officialAccountsName"
+                   fx:id="name"/>
+        </AnchorPane>
+    </ListView>
+</AnchorPane>

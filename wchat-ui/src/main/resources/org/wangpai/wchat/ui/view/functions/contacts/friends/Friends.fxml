@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 此组件的高度将会在 Java 代码中自动地被动态调整。此处无需设置 -->
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            prefWidth="250.0" prefHeight="25.0"
+            id="friends" stylesheets="@Friends.css"
+            fx:controller="org.wangpai.wchat.ui.view.functions.contacts.friends.Friends"
+            fx:id="friends">
+    <!-- 小标题 -->
+    <Label layoutX="10.0" layoutY="0.0" prefWidth="240.0" prefHeight="25.0"
+           id="friendsTag"
+           fx:id="friendsTag"
+           text="好友"/>
+
+    <!-- 此组件的高度将会在 Java 代码中自动地被动态调整。此处无需设置 -->
+    <ListView layoutX="0.0" layoutY="25.0" prefWidth="250.0" prefHeight="60.0"
+              id="friendsList"
+              fx:id="friendsList"/>
+</AnchorPane>

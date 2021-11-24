@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="250.0" prefHeight="60.0"
+            styleClass="friendsElement" stylesheets="@FriendsElement.css"
+            onMouseClicked="#onClickFriendsElement"
+            fx:id="friendsElement"
+            fx:controller="org.wangpai.wchat.ui.view.functions.contacts.friends.FriendsElement">
+    <!-- 头像 -->
+    <Label layoutX="10.0" layoutY="10.0" prefWidth="40.0" prefHeight="40.0"
+           styleClass="friendsAvatar"
+           fx:id="avatar"/>
+
+    <!-- 名称 -->
+    <Label layoutX="60.0" layoutY="20.0" prefWidth="190.0" prefHeight="20.0"
+           styleClass="friendsName"
+           fx:id="name"/>
+</AnchorPane>

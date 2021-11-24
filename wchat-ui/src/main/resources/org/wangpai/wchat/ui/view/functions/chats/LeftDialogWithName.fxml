@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="670.0" prefHeight="90.0"
+            styleClass="leftDialog"
+            stylesheets="@LeftDialogWithName.css"
+            fx:controller="org.wangpai.wchat.ui.view.functions.chats.LeftDialogWithName"
+            fx:id="LeftDialogWithName">
+    <!-- 时间信息 -->
+    <!-- 此组件的 X 坐标应使之位于中间，宽度随时间文本动态调整，但高度应不变 -->
+    <Label layoutX="330.0" layoutY="10.0" prefWidth="40.0" prefHeight="18.0"
+           styleClass="msgTime"
+           fx:id="time"/>
+
+    <!-- 头像 -->
+    <Label layoutX="30.0" layoutY="40.0" prefWidth="35.0" prefHeight="35.0"
+           styleClass="dialogAvatar"
+           fx:id="avatar"/>
+
+    <!-- 昵称 -->
+    <Label layoutX="70.0" layoutY="30.0" prefWidth="300.0" prefHeight="15.0"
+           styleClass="leftDialogName"
+           fx:id="name"/>
+
+    <!-- 文本信息 -->
+    <TextArea layoutX="75.0" layoutY="50.0" prefWidth="370.0" prefHeight="35.0"
+              wrapText="true" editable="false"
+              styleClass="leftDialogMsg"
+              fx:id="msg"/>
+</AnchorPane>
+
+
+

@@ -1,0 +1,46 @@
+
+#dialogList {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+#dialogContent, #dialogList .list-cell {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 0;
+}
+
+#dialogList .scroll-bar:vertical .track,
+#dialogList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#dialogList .scroll-bar:horizontal .increment-button,
+#dialogList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+#dialogList .scroll-bar:vertical .increment-button,
+#dialogList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 -10000 0;
+}
+
+#dialogList .scroll-bar .increment-button,
+#dialogList .scroll-bar .decrement-button {
+    -fx-padding: 0;
+}
+
+#dialogList .scroll-bar:vertical .thumb,
+#dialogList .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+#dialogList .scroll-bar:vertical,
+#dialogList .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}

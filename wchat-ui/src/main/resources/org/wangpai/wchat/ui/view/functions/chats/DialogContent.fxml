@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            prefWidth="700.0" prefHeight="540.0"
+            id="dialogContent"
+            stylesheets="@DialogContent.css"
+            fx:controller="org.wangpai.wchat.ui.view.functions.chats.DialogContent"
+            fx:id="dialogContent">
+    <ListView prefWidth="700.0" prefHeight="540.0" id="dialogList" fx:id="dialogList"
+              onMouseClicked="#onClickDialogContentList"/>
+</AnchorPane>

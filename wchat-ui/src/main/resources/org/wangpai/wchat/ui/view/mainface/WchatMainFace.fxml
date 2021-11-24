@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1000" prefHeight="750"
+            id="wchatMainFace" stylesheets="@WchatMainFace.css"
+            fx:controller="org.wangpai.wchat.ui.view.mainface.WchatMainFace"
+            fx:id="wchatMainFace">
+    <!-- 功能栏 -->
+    <!--
+    将度高度加 1 是为了解决 AnchorPane 自动调整尺寸的问题。
+    因为其它同级组件将尺寸自动调整得更高，所以此处也要调整，否则会有白边
+     -->
+    <AnchorPane layoutX="0" layoutY="0" prefWidth="50" prefHeight="751.0"
+                id="functionBar" fx:id="functionBar">
+        <!-- 主头像 -->
+        <Button layoutX="7.5" layoutY="35" prefHeight="35" prefWidth="35"
+                minWidth="35.0" minHeight="35.0" maxWidth="35.0" maxHeight="35.0"
+                id="functionBarAvatar" fx:id="functionBarAvatar" onAction="#onActionFunctionBarAvatar"/>
+
+        <!-- 聊天 -->
+        <Button layoutX="12.5" layoutY="105" prefWidth="25" prefHeight="25" mnemonicParsing="false"
+                id="functionBarChats"
+                fx:id="chatsButton"
+                onAction="#onActionChats"
+                onMouseEntered="#onMouseEnteredChats"
+                onMouseExited="#onMouseExitedChats"/>
+
+        <!-- 联系人 -->
+        <Button layoutX="12.5" layoutY="155" prefWidth="25" prefHeight="25" mnemonicParsing="false"
+                id="functionBarContacts"
+                fx:id="contactsButton"
+                onAction="#onActionContacts"
+                onMouseEntered="#onMouseEnteredContacts"
+                onMouseExited="#onMouseExitedContacts"/>
+
+        <!-- 更多 -->
+        <Button layoutX="12.5" layoutY="705.0" prefWidth="25" prefHeight="25" mnemonicParsing="false"
+                id="functionBarMore"
+                onAction="#onActionMore"
+                onMouseEntered="#onMouseEnteredMore"
+                onMouseExited="#onMouseExitedMore"/>
+
+    </AnchorPane>
+
+    <!-- chats 功能界面 -->
+    <AnchorPane layoutX="50" layoutY="0" prefWidth="950.0" prefHeight="750.0" visible="true"
+                id="chats" styleClass="functionFace" fx:id="chats">
+        <!-- 搜索栏 -->
+        <AnchorPane id="chatsSearch" styleClass="search" prefWidth="250" prefHeight="65.0">
+            <TextField layoutX="10.0" layoutY="25.0" prefWidth="190" prefHeight="25"
+                       styleClass="searchInput" promptText="搜索"/>
+            <Label layoutX="210.0" layoutY="25.0" prefWidth="25" prefHeight="25" styleClass="add"/>
+        </AnchorPane>
+
+        <!-- 会话栏 -->
+        <AnchorPane layoutX="0" layoutY="65" prefWidth="250" prefHeight="685.0"
+                    id="chatsGroup" fx:id="chatsGroup" styleClass="listGroupContainer">
+            <!-- 此处的子组件将在 Java 代码中创建并插入 -->
+        </AnchorPane>
+
+        <!-- 最小化、最大化、关闭 -->
+        <AnchorPane layoutX="250.0" layoutY="0" prefWidth="700.0" prefHeight="25.0"
+                    id="chatsMainFaceControl" styleClass="mainFaceControl">
+            <Button layoutX="595.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="chatsMainFaceControlMin" styleClass="minimize" onAction="#onActionMinimize"/>
+            <Button layoutX="630.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="chatsMainFaceControlMax" styleClass="maximize" onAction="#onActionMaximize"/>
+            <Button layoutX="665.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="chatsMainFaceControlClose" styleClass="close" onAction="#onActionClose"/>
+        </AnchorPane>
+
+        <!-- 将高度设为 39 而不是 40，是因为留一条缝给下边框 -->
+        <AnchorPane id="chatsHeadBar" layoutX="250" layoutY="25.0" prefWidth="700.0" prefHeight="39">
+            <Label id="chatsTitle" layoutX="30" layoutY="0" prefWidth="400" prefHeight="39.0"/>
+            <Label layoutX="660.0" layoutY="0" prefWidth="40.0" prefHeight="39.0"
+                   id="chatsChatInfo" styleClass="infoMore" onMouseClicked="#onMouseClickedChatsInfo"
+                   fx:id="chatsChatInfo"/>
+        </AnchorPane>
+
+        <AnchorPane id="chatsDialogContent" layoutX="250" layoutY="65" prefWidth="700.0" prefHeight="540.0"/>
+
+        <!-- 工具栏 -->
+        <AnchorPane id="chatsToolBar" layoutX="250" layoutY="605.0" prefWidth="700.0" prefHeight="35.0">
+            <Button id="chatsSticker" layoutX="25" layoutY="10" prefWidth="25.0" prefHeight="25.0"/>
+        </AnchorPane>
+
+        <!-- 输入栏 -->
+        <AnchorPane id="chatsInputBox" layoutX="250.0" layoutY="640.0" prefWidth="700.0" prefHeight="75.0">
+            <TextArea layoutX="30.0" layoutY="0.0" prefWidth="670.0" prefHeight="75" wrapText="true"
+                      id="chatsTextInputArea"
+                      styleClass="input"
+                      fx:id="chatsTextInputArea"
+                      onKeyPressed="#onKeyPressedInputArea"/>
+        </AnchorPane>
+
+        <!-- 发送 -->
+        <AnchorPane id="chatsSendBox" layoutX="250.0" layoutY="710.0" prefWidth="700.0" prefHeight="40.0">
+            <Button id="chatsSendButton" layoutX="595.0" layoutY="10.0" prefWidth="70" prefHeight="25" text="发送(S)"
+                    onMouseClicked="#onClickedChatsSend"/>
+        </AnchorPane>
+
+        <!-- 空白消息发送时的告警提示 -->
+        <Label layoutX="825.0" layoutY="670.0" prefWidth="115.0" prefHeight="30.0" text="不能发送空白信息" visible="false"
+               id="chatsAlertMsg" fx:id="chatsAlertMsg"/>
+
+        <!-- 初始空白面板 -->
+        <AnchorPane id="chatsDefaultFace" styleClass="defaultFace" layoutX="250" layoutY="25.0" prefWidth="700.0"
+                    prefHeight="725.0">
+            <Label layoutX="300.0" layoutY="300.0" prefWidth="100.0" prefHeight="100.0" styleClass="defaultFaceLabel"/>
+        </AnchorPane>
+
+    </AnchorPane>
+
+    <!-- user 功能界面 -->
+    <AnchorPane layoutX="50" layoutY="0" prefWidth="950.0" prefHeight="750.0" visible="false"
+                id="user" fx:id="contacts" styleClass="functionFace">
+        <!-- 搜索栏 -->
+        <AnchorPane id="contactsSearch" styleClass="search" prefWidth="250" prefHeight="65.0">
+            <TextField layoutX="10.0" layoutY="25.0" prefWidth="190" prefHeight="25"
+                       styleClass="searchInput" promptText="搜索"/>
+            <Label layoutX="210.0" layoutY="25.0" prefWidth="25" prefHeight="25" styleClass="add"/>
+        </AnchorPane>
+
+        <!-- 联系人列表 -->
+        <AnchorPane layoutX="0" layoutY="65" prefWidth="250" prefHeight="685.0"
+                    id="contactsGroup" fx:id="contactsGroup" styleClass="listGroupContainer">
+            <!-- 此处的子组件将在 Java 代码中创建并插入 -->
+        </AnchorPane>
+
+        <!-- 操作栏；最小化、关闭 -->
+        <AnchorPane layoutX="250.0" layoutY="0" prefWidth="700.0" prefHeight="25.0"
+                    id="contactsMainFaceControl" styleClass="mainFaceControl">
+            <Button layoutX="595.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="contactsMainFaceMin" styleClass="minimize" onAction="#onActionMinimize"/>
+            <Button layoutX="630.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="contactsMainFaceMax" styleClass="maximize" onAction="#onActionMaximize"/>
+            <Button layoutX="665.0" layoutY="0" prefWidth="35.0" prefHeight="25.0"
+                    id="contactsMainFaceClose" styleClass="close" onAction="#onActionClose"/>
+        </AnchorPane>
+
+        <AnchorPane id="contactsHeadBar" layoutX="250" layoutY="25.0" prefWidth="700.0" prefHeight="40">
+            <Label id="contactsTitle" layoutX="30" layoutY="0" prefWidth="400" prefHeight="40.0"/>
+        </AnchorPane>
+
+        <AnchorPane id="contactsContent" layoutX="250" layoutY="65" prefWidth="700.0" prefHeight="685.0"/>
+
+        <!-- 初始空白面板 -->
+        <AnchorPane id="contactsDefaultFace" styleClass="defaultFace" layoutX="250" layoutY="25.0" prefWidth="700.0"
+                    prefHeight="725.0">
+            <Label layoutX="300.0" layoutY="300.0" prefWidth="100.0" prefHeight="100.0" styleClass="defaultFaceLabel"/>
+        </AnchorPane>
+    </AnchorPane>
+</AnchorPane>

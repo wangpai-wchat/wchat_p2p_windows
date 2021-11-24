@@ -1,0 +1,95 @@
+
+#newFriends {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0;
+}
+
+#newFriendsTag {
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #999999;
+    -fx-alignment: center-left;
+}
+
+#newFriendsList {
+    -fx-background-color: transparent;
+}
+
+#newFriendsList .scroll-bar:vertical .track,
+#newFriendsList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#newFriendsList .scroll-bar:vertical .increment-button,
+#newFriendsList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+#newFriendsList .scroll-bar:horizontal .increment-button,
+#newFriendsList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-padding: 0 0 0 0;
+}
+
+#newFriendsList .scroll-bar .increment-button,
+#newFriendsList .scroll-bar .decrement-button {
+    -fx-padding: 0 0 -10000 0;
+}
+
+#newFriendsList .scroll-bar:vertical .thumb,
+#newFriendsList .scroll-bar:horizontal .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+#newFriendsList .scroll-bar:vertical,
+#newFriendsList .scroll-bar:horizontal {
+    -fx-pref-width: 10;
+    -fx-background-color: transparent;
+}
+
+#newFriendsList .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#newFriendsList .list-cell:selected {
+    -fx-background-color: #c6c5c4;
+    -fx-text-fill: black;
+}
+
+#newFriendsList .cell.indexed-cell.list-cell {
+    -fx-padding: 0;
+}
+
+#newFriendsAvatar {
+    -fx-background-image: url("/system/icons/newfriends/new_friends.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-color: transparent;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 2px;
+    -fx-border-width: 0px;
+    -fx-border-radius: 2px;
+    -fx-padding: 0;
+}
+
+#newFriendsName {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: left;
+    -fx-padding: 0;
+    -fx-label-padding: 0;
+    -fx-alignment: top-left;
+}

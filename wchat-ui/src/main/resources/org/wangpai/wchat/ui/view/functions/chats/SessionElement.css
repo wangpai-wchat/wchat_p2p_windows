@@ -1,0 +1,62 @@
+
+.sessionElement {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.sessionElementAvatar {
+    -fx-background-color: transparent;
+    -fx-background-size: 40px 40px;
+    -fx-background-radius: 2px;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-border-width: 0px;
+    -fx-border-radius: 2px;
+    -fx-padding: 0;
+}
+
+.sessionElementName {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+    -fx-overflow: hidden;
+    -fx-text-align: left;
+    -fx-text-overflow: ellipsis;
+}
+
+.sessionElementMsgDigest {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #999999;
+    -fx-font-size: 12px;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+}
+
+.sessionElementTime {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #999999;
+    -fx-font-size: 12px;
+    -fx-overflow: hidden;
+    -fx-text-overflow: clip;
+    -fx-padding: 0px;
+    -fx-alignment: center-right;
+}
+
+.sessionElementMsgReminderNoCounter {
+    -fx-background-color: red;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-alignment: center;
+}
+
+.sessionElementMsgReminderWithCounter {
+    -fx-background-color: red;
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}

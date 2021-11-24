@@ -1,0 +1,94 @@
+
+#officialAccounts {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0;
+}
+
+#officialAccountsTag {
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #999999;
+    -fx-alignment: center-left;
+}
+
+#officialAccountsList {
+    -fx-background-color: transparent;
+}
+
+#officialAccountsList .scroll-bar:vertical .track,
+#officialAccountsList .scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#officialAccountsList .scroll-bar:vertical .increment-button,
+#officialAccountsList .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+#officialAccountsList .scroll-bar:horizontal .increment-button,
+#officialAccountsList .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-padding: 0 0 0 0;
+}
+
+#officialAccountsList .scroll-bar .increment-button,
+#officialAccountsList .scroll-bar .decrement-button {
+    -fx-padding: 0 0 -10000 0;
+}
+
+#officialAccountsList .scroll-bar:vertical .thumb {
+    -fx-background-color: #cac7c6;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 20px;
+}
+
+#officialAccountsList .scroll-bar:vertical,
+#officialAccountsList .scroll-bar:horizontal {
+    -fx-pref-width: 10;
+    -fx-background-color: transparent;
+}
+
+#officialAccountsList .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+#officialAccountsList .list-cell:selected {
+    -fx-background-color: #c6c5c4;
+    -fx-text-fill: black;
+}
+
+#officialAccountsList .cell.indexed-cell.list-cell {
+    -fx-padding: 0;
+}
+
+#officialAccountsAvatar {
+    -fx-background-image: url("/system/icons/officialaccounts/official_accounts.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-color: transparent;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 2px;
+    -fx-border-width: 0px;
+    -fx-border-radius: 2px;
+    -fx-padding: 0;
+}
+
+#officialAccountsName {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-white-space: nowrap;
+    -fx-overflow: hidden;
+    -fx-text-overflow: ellipsis;
+    -fx-text-align: left;
+    -fx-padding: 0;
+    -fx-label-padding: 0;
+    -fx-alignment: top-left;
+}

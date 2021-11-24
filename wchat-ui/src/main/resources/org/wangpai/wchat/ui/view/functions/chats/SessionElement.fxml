@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="250.0" prefHeight="60.0"
+            styleClass="sessionElement"
+            stylesheets="@SessionElement.css"
+            onMouseClicked="#onClickSessionElement"
+            fx:controller="org.wangpai.wchat.ui.view.functions.chats.SessionElement"
+            fx:id="sessionElement">
+    <!-- 头像 -->
+    <Label layoutX="10.0" layoutY="10.0" prefWidth="40.0" prefHeight="40.0"
+           styleClass="sessionElementAvatar"
+           fx:id="avatar"/>
+
+    <!-- 昵称 -->
+    <Label layoutX="60.0" layoutY="10.0" prefWidth="140.0" prefHeight="15.0"
+           styleClass="sessionElementName"
+           fx:id="name"/>
+
+    <!-- 信息摘要 -->
+    <!-- 此组件的右端点坐标不能变化。此组件的左端点坐标及宽度将在 Java 代码中动态调整 -->
+    <Label layoutX="60.0" layoutY="35.0" prefWidth="200.0" prefHeight="15.0"
+           styleClass="sessionElementMsgDigest"
+           fx:id="msgDigest"/>
+
+    <!-- 时间 -->
+    <Label layoutX="140.0" layoutY="10.0" prefWidth="80.0" prefHeight="15.0"
+           styleClass="sessionElementTime"
+           fx:id="time"/>
+
+    <!-- 消息提醒红点-无数字版本 -->
+    <!-- 红点中心位于头像的右上角 -->
+    <Label layoutX="45" layoutY="5" prefWidth="10.0" prefHeight="10.0"
+           minWidth="10.0" minHeight="10.0" maxWidth="10.0" maxHeight="10.0"
+           visible="false"
+           styleClass="sessionElementMsgReminderNoCounter"
+           fx:id="msgReminderNoCounter"/>
+
+    <!-- 消息提醒红点-含数字版本 -->
+    <!-- 红点中心位于头像的右上角 -->
+    <Label layoutX="42.5" layoutY="2.5" prefWidth="15.0" prefHeight="15.0"
+           minWidth="15.0" minHeight="15.0" maxWidth="15.0" maxHeight="15.0"
+           visible="false"
+           styleClass="sessionElementMsgReminderWithCounter"
+           fx:id="msgReminderWithCounter"/>
+</AnchorPane>

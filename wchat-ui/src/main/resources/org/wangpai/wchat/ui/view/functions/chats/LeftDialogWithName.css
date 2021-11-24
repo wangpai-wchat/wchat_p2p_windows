@@ -1,0 +1,41 @@
+
+.leftDialog {
+    -fx-background-color: transparent;
+}
+
+.msgTime {
+    -fx-background-color: #dadada;
+    -fx-background-radius: 2px;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #ffffff;
+    -fx-alignment: center;
+}
+
+.dialogAvatar {
+    -fx-background-color: #ffffff;
+}
+
+.leftDialogName {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 12px;
+    -fx-text-fill: #999999;
+    -fx-text-align: left;
+}
+
+.leftDialogMsg {
+    -fx-background-radius: 2px;
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 16px;
+    -fx-text-fill: #000000;
+}
+
+.leftDialogMsg {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.leftDialogMsg, .leftDialogMsg .content, .leftDialogMsg:focused {
+    -fx-background-color: #ffffff;
+}
+

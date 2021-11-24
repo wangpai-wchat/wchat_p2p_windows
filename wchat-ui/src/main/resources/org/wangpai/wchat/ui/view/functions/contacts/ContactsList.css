@@ -1,0 +1,8 @@
+/**
+ * 已定义在 WchatMainFace.css 中，因此此处不给出
+ */
+
+#contactsList .cell.indexed-cell.list-cell {
+    -fx-padding: 0;
+}
+

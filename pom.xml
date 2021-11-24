@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- 此部分不能使用 <properties/...> 中的元素来取代，必须直接给出具体的内容  -->
+        <version>2.6.2</version>
+    </parent>
+
+    <groupId>org.wangpai.wchat</groupId>
+    <artifactId>wchat-windows</artifactId>
+    <version>M.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>wchat-ui</module>
+        <module>wchat-client</module>
+        <module>wchat-center</module>
+        <module>wchat-persistence</module>
+        <module>wchat-server</module>
+        <module>wchat-common</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+
+        <!-- 凡是自定义的属性，都要加 .custom 后缀，以防与已有的预置属性相冲突 -->
+        <project.version.custom>M.0.0</project.version.custom>
+
+        <junit.version.custom>5.8.0-M1</junit.version.custom>
+        <lombok.version.custom>1.18.20</lombok.version.custom>
+        <slf4j.version.custom>1.7.13</slf4j.version.custom>
+        <javafx.version.custom>17.0.1</javafx.version.custom>
+        <spring.version.custom>5.3.9</spring.version.custom>
+        <mybatis-springboot.version.custom>2.2.0</mybatis-springboot.version.custom>
+        <mysql.version.custom>8.0.27</mysql.version.custom>
+        <netty.version.custom>4.1.70.Final</netty.version.custom>
+        <jackson.version.custom>2.13.1</jackson.version.custom>
+
+        <mainclass.custom>org.wangpai.wchat.XXX</mainclass.custom>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-common</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-center</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-client</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-persistence</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-server</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wangpai.wchat</groupId>
+                <artifactId>wchat-ui</artifactId>
+                <version>${project.version.custom}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version.custom}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit.version.custom}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
+                <version>${javafx.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-fxml</artifactId>
+                <version>${javafx.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-springboot.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version.custom}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version.custom}</version>
+            </dependency>
+            <!-- 提供对日期转换的支持 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version.custom}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

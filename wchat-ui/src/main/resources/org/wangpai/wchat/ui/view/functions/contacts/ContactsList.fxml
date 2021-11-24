@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<ListView xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+          prefWidth="250" prefHeight="685.0"
+          id="contactsList" styleClass="listGroup" stylesheets="@ContactsList.css"
+          fx:controller="org.wangpai.wchat.ui.view.functions.contacts.ContactsList"
+          fx:id="contactsList">
+</ListView>
